@@ -57,7 +57,6 @@ async def download_video_state(msg:types.Message, state:FSMContext):
     await state.finish()
     path = "video"
     shutil.rmtree(path)
-    print("/home/school/math/final удалена.")
 
 @dp.message_handler(state=DownloadAudio.download)
 async def download_audio_state(msg:types.Message, state:FSMContext):
@@ -75,7 +74,6 @@ async def download_audio_state(msg:types.Message, state:FSMContext):
     await state.finish()
     path = "audio"
     shutil.rmtree(path)
-    print("/home/school/math/final удалена.")
 
 executor.start_polling(dp)
 
